@@ -1,59 +1,115 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/9113740/201498864-2a900c64-d88f-4ed4-b5cf-770bcb57e1f5.png">
-  <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/9113740/201498152-b171abb8-9225-487a-821c-6ff49ee48579.png">
-</picture>
+# 🖥️ Swachhta Monitoring AI Frontend
 
-<div align="center"><strong>Next.js 14 Admin Dashboard Starter Template With Shadcn-ui</strong></div>
-<div align="center">Built with the Next.js App Router</div>
-<br />
-<div align="center">
-<a href="https://next-shadcn-dashboard-starter.vercel.app">View Demo</a>
-<span>
-</div>
+Welcome to the frontend of the **Swachhta Monitoring AI** project! This interface serves as part of a holistic solution designed to monitor cleanliness and green LiFE (Lifestyle for Environment) practices, as implemented within the Department of Posts (India).
 
-## Overview
+---
 
-This is a starter template using the following stack:
+## 🚀 Project Overview
 
-- Framework - [Next.js 14](https://nextjs.org/13)
-- Language - [TypeScript](https://www.typescriptlang.org)
-- Styling - [Tailwind CSS](https://tailwindcss.com)
-- Components - [Shadcn-ui](https://ui.shadcn.com)
-- Schema Validations - [Zod](https://zod.dev)
-- State Management - [Zustand](https://zustand-demo.pmnd.rs)
-- Auth - [Auth.js](https://authjs.dev/)
-- File Uploading - [Uploadthing](https://uploadthing.com)
-- Tables - [Tanstack Tables](https://ui.shadcn.com/docs/components/data-table)
-- Forms - [React Hook Form](https://ui.shadcn.com/docs/components/form)
-- Linting - [ESLint](https://eslint.org)
-- Pre-commit Hooks - [Husky](https://typicode.github.io/husky/)
-- Formatting - [Prettier](https://prettier.io)
+The frontend component is built using **Next.js** and designed to provide a seamless user interface for monitoring, visualizing, and interacting with data collected for cleanliness and green initiatives.
 
-_If you are looking for a React admin dashboard starter, here is the [repo](https://github.com/Kiranism/react-shadcn-dashboard-starter)._
+### Key Features:
+- Clean and responsive UI for displaying cleanliness data
+- User authentication and session management via **JWT**
+- Interaction with backend APIs to upload images, fetch analytics, and visualize data
+- UI components powered by **Radix UI** for accessibility and styling
+- Makes secure HTTP requests to the backend using **Axios**
 
-## Pages
+---
 
-| Pages                                                                             | Specifications                                                                                        |
-| :-------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------- |
-| [Signup](https://next-shadcn-dashboard-starter.vercel.app/)                       | Authentication with **NextAuth** supports Social logins and email logins(Enter dummy email for demo). |
-| [Dashboard](https://next-shadcn-dashboard-starter.vercel.app/dashboard)           | Cards with recharts graphs for analytics.                                                             |
-| [Users](https://next-shadcn-dashboard-starter.vercel.app/dashboard/user)          | Tanstack tables with user details client side searching, pagination etc                               |
-| [Users/new](https://next-shadcn-dashboard-starter.vercel.app/dashboard/user/new)  | A User Form with Uploadthing to support file uploading with dropzone.                                 |
-| [Employee](https://next-shadcn-dashboard-starter.vercel.app/dashboard/employee)   | Tanstack tables with server side searching, pagination etc).                                          |
-| [Profile](https://next-shadcn-dashboard-starter.vercel.app/dashboard/profile)     | Mutistep dynamic forms using react-hook-form and zod for form validation.                             |
-| [Kanban Board](https://next-shadcn-dashboard-starter.vercel.app/dashboard/kanban) | A Drag n Drop task management board with dnd-kit and zustand to persist state locally.                |
-| [Not Found](https://next-shadcn-dashboard-starter.vercel.app/dashboard/notfound)  | Not Found Page Added in the root level                                                                |
-| -                                                                                 | -                                                                                                     |
+## 🏗️ Technologies & Tools
 
-## Getting Started
+- **Languages**: JavaScript, TypeScript
+- **Frameworks**: Next.js
+- **UI Components**: Radix UI
+- **HTTP Requests**: Axios
+- **Authentication**: JWT (JSON Web Tokens)
 
-Follow these steps to clone the repository and start the development server:
+---
 
-- `git clone https://github.com/Kiranism/next-shadcn-dashboard-starter.git`
-- `npm install`
-- Create a `.env.local` file by copying the example environment file:
-  `cp env.example.txt .env.local`
-- Add the required environment variables to the `.env.local` file.
-- `npm run dev`
+## ⚙️ How to Set Up and Run the Project
 
-You should now be able to access the application at http://localhost:3000.
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Node.js 14.x or above
+- NPM or Yarn
+- Git
+
+### 1. Clone the Repository
+
+First, clone the repository to your local machine using Git.
+
+```bash
+git clone https://github.com/YourUsername/SwachhtaMonitoringAI-Frontend.git
+```
+
+### 2. Clone the Repository
+
+Navigate to the project directory and install all required dependencies.
+
+```bash
+cd SwachhtaMonitoringAI-Frontend
+npm install
+```
+### 3. Set Up Environment Variables
+
+Create a .env.local file at the root of your project and add the necessary environment variables:
+
+```bash
+# Add Uploadthing secret and appId to setup file upload https://uploadthing.com/ 
+UPLOADTHING_SECRET=*****
+UPLOADTHING_APP_ID=*****
+
+# Next auth https://next-auth.js.org/configuration/options
+# Run this command to generate a new NEXTAUTH_SECRET
+# $ openssl rand -base64 32
+
+NEXTAUTH_URL = http://localhost:3000
+NEXTAUTH_SECRET=*****
+
+# Go to GitHub and setup the OAuth configuration
+# https://next-auth.js.org/providers/github#configuration
+# https://github.com/settings/developers
+
+GITHUB_ID = 
+GITHUB_SECRET = 
+
+# Add your backend API URL
+NEXT_PUBLIC_API_URL=<your-backend-api-url>
+NEXT_PUBLIC_JWT_SECRET=<your-jwt-secret>
+
+```
+
+### 4. Run the Development Server
+
+Once everything is set up, start the Next.js development server:
+
+```bash
+npm run dev
+```
+Or with Yarn:
+
+```bash
+yarn dev
+```
+
+## 🛠️ How It Works
+
+- **JWT Authentication**: User authentication is managed using JSON Web Tokens. Upon login, the token is stored in the frontend and used to authenticate API requests.
+- **Axios**: All API requests, such as uploading images or retrieving cleanliness analytics, are made using **Axios**, which handles HTTP requests efficiently.
+- **Radix UI**: The project uses **Radix UI** for building accessible and customizable UI components.
+
+---
+
+## 🧪 Testing the Application
+
+You can test the frontend by logging in and interacting with the dashboard. All user data and interactions are sent via secure HTTP requests to the backend using **Axios**.
+
+If you encounter any issues with authentication or data fetching, check your **JWT** setup and API URL configuration in the `.env.local` file.
+
+---
+
+## ⚡ Fun Fact
+
+This project is aligned with the Swachh Bharat Abhiyan and India's green practices, contributing towards a cleaner and greener future through the power of AI!
