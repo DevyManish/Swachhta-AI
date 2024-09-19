@@ -49,7 +49,7 @@ git clone https://github.com/YourUsername/SwachhtaMonitoringAI-Frontend.git
 Navigate to the project directory and install all required dependencies.
 
 ```bash
-cd SwachhtaMonitoringAI-Frontend
+cd frontend
 npm install
 ```
 ### 3. Set Up Environment Variables
