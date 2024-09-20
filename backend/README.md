@@ -49,7 +49,7 @@ git clone https://github.com/DevyManish/PS1751-SwachhtaMonitoringAI.git
 You need to install requirements.txt
 
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 Then Run The Second Command To Train The Model
 
