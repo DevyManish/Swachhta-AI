@@ -3,3 +3,4 @@ flask
 tensorflow
 flask_cors
 matplotlib
+streamlit
