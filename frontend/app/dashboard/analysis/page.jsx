@@ -46,14 +46,12 @@ const Page = () => {
   const [open, setOpen] = useState(false);
   const [analysisResult, setAnalysisResult] = useState(null);
 
-  const title = initialData ? "Edit page" : "Create Analysis";
-  const description = initialData
-    ? "Edit an page record."
-    : "Add a new page record";
-  const toastMessage = initialData ? "page updated." : "page created.";
+  const title = "Create Analysis";
+  const description = "Add a new page record";
+  const toastMessage = "anaylsis result has been successfully submitted";
   const action = "Send";
 
-  const defaultValues = initialData || {
+  const defaultValues = {
     imgUrl: [],
     batchId: "588547jejej83j3m44521",
   };
@@ -247,18 +245,7 @@ const Page = () => {
         </div>
         <Separator />
         {renderAnalysisResult()}
-        <div className="overflow-y-scroll">
-          {initialData && (
-            <Button
-              disabled={loading}
-              variant="destructive"
-              size="sm"
-              onClick={() => setOpen(true)}
-            >
-              <Trash className="h-4 w-4" />
-            </Button>
-          )}
-        </div>
+        
       </div>
     </PageContainer>
   );
