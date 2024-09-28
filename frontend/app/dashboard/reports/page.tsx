@@ -1,11 +1,11 @@
-import { Breadcrumbs } from '@/components/breadcrumbs';
-import PageContainer from '@/components/layout/page-container';
-import { UserClient } from '@/components/tables/user-tables/client';
-import { analysisBatches } from '@/constants/data';
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import PageContainer from "@/components/layout/page-container";
+import { UserClient } from "@/components/tables/user-tables/client";
+import { analysisBatches } from "@/constants/data";
 
 const breadcrumbItems = [
-  { title: 'Dashboard', link: '/dashboard' },
-  { title: 'Reports', link: '/dashboard/reports' }
+  { title: "Dashboard", link: "/dashboard" },
+  { title: "Reports", link: "/dashboard/reports" },
 ];
 export default function page() {
   return (
