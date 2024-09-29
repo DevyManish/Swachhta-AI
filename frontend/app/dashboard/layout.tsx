@@ -1,16 +1,16 @@
-import Header from '@/components/layout/header';
-import Sidebar from '@/components/layout/sidebar';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { Toaster } from '@/components/ui/toaster';
-import type { Metadata } from 'next';
+import Header from "@/components/layout/header";
+import Sidebar from "@/components/layout/sidebar";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Toaster } from "@/components/ui/toaster";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Swachhta and LiFE Practices Monitoring',
-  description: 'Basic dashboard with Next.js and Shadcn'
+  title: "Swachhta and LiFE Practices Monitoring",
+  description: "Basic dashboard with Next.js and Shadcn",
 };
 
 export default function DashboardLayout({
-  children
+  children,
 }: {
   children: React.ReactNode;
 }) {

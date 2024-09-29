@@ -1,6 +1,6 @@
-import { forwardRef, useId } from 'react';
-import { Input } from './ui/input';
-import { Label } from './ui/label';
+import { forwardRef, useId } from "react";
+import { Input } from "./ui/input";
+import { Label } from "./ui/label";
 
 interface InputDivProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
@@ -8,8 +8,8 @@ interface InputDivProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 const InputDiv = forwardRef<HTMLInputElement, InputDivProps>(function InputDiv(
-  { label, className = '', type = 'text', placeholder = '', ...props },
-  ref
+  { label, className = "", type = "text", placeholder = "", ...props },
+  ref,
 ) {
   const id = useId();
   return (

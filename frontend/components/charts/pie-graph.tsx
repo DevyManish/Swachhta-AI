@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import * as React from 'react';
-import { TrendingUp } from 'lucide-react';
-import { Label, Pie, PieChart } from 'recharts';
+import * as React from "react";
+import { TrendingUp } from "lucide-react";
+import { Label, Pie, PieChart } from "recharts";
 
 import {
   Card,
@@ -10,42 +10,42 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle
-} from '@/components/ui/card';
+  CardTitle,
+} from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
-  ChartTooltipContent
-} from '@/components/ui/chart';
+  ChartTooltipContent,
+} from "@/components/ui/chart";
 const chartData = [
-  { type: 'plastic', visitors: 275, fill: 'var(--color-chrome)' },
-  { type: 'organic', visitors: 287, fill: 'var(--color-firefox)' },
-  { type: 'paper', visitors: 173, fill: 'var(--color-edge)' },
-  { type: 'metal', visitors: 200, fill: 'var(--color-safari)' },
-  { type: 'other', visitors: 190, fill: 'var(--color-other)' }
+  { type: "plastic", visitors: 275, fill: "var(--color-chrome)" },
+  { type: "organic", visitors: 287, fill: "var(--color-firefox)" },
+  { type: "paper", visitors: 173, fill: "var(--color-edge)" },
+  { type: "metal", visitors: 200, fill: "var(--color-safari)" },
+  { type: "other", visitors: 190, fill: "var(--color-other)" },
 ];
 
 const chartConfig = {
   chrome: {
-    label: 'Visitors'
+    label: "Visitors",
   },
   firefox: {
-    label: 'Plastic',
-    color: 'hsl(var(--chart-1))'
+    label: "Plastic",
+    color: "hsl(var(--chart-1))",
   },
   edge: {
-    label: 'organic',
-    color: 'hsl(var(--chart-2))'
+    label: "organic",
+    color: "hsl(var(--chart-2))",
   },
   safari: {
-    label: 'paper',
-    color: 'hsl(var(--chart-3))'
+    label: "paper",
+    color: "hsl(var(--chart-3))",
   },
   other: {
-    label: 'metal',
-    color: 'hsl(var(--chart-4))'
-  }
+    label: "metal",
+    color: "hsl(var(--chart-4))",
+  },
 } satisfies ChartConfig;
 
 export function PieGraph() {
@@ -78,7 +78,7 @@ export function PieGraph() {
             >
               <Label
                 content={({ viewBox }) => {
-                  if (viewBox && 'cx' in viewBox && 'cy' in viewBox) {
+                  if (viewBox && "cx" in viewBox && "cy" in viewBox) {
                     return (
                       <text
                         x={viewBox.cx}

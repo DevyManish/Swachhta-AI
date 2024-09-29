@@ -9,6 +9,7 @@ Welcome to the frontend of the **Swachhta Monitoring AI** project! This interfac
 The frontend component is built using **Next.js** and designed to provide a seamless user interface for monitoring, visualizing, and interacting with data collected for cleanliness and green initiatives.
 
 ### Key Features:
+
 - Clean and responsive UI for displaying cleanliness data
 - User authentication and session management via **JWT**
 - Interaction with backend APIs to upload images, fetch analytics, and visualize data
@@ -32,6 +33,7 @@ The frontend component is built using **Next.js** and designed to provide a seam
 ### Prerequisites
 
 Before you begin, ensure you have the following installed:
+
 - Node.js 14.x or above
 - NPM or Yarn
 - Git
@@ -52,12 +54,13 @@ Navigate to the project directory and install all required dependencies.
 cd frontend
 npm install
 ```
+
 ### 3. Set Up Environment Variables
 
 Create a .env.local file at the root of your project and add the necessary environment variables:
 
 ```bash
-# Add Uploadthing secret and appId to setup file upload https://uploadthing.com/ 
+# Add Uploadthing secret and appId to setup file upload https://uploadthing.com/
 UPLOADTHING_SECRET=*****
 UPLOADTHING_APP_ID=*****
 
@@ -72,8 +75,8 @@ NEXTAUTH_SECRET=*****
 # https://next-auth.js.org/providers/github#configuration
 # https://github.com/settings/developers
 
-GITHUB_ID = 
-GITHUB_SECRET = 
+GITHUB_ID =
+GITHUB_SECRET =
 
 # Add your backend API URL
 NEXT_PUBLIC_API_URL=<your-backend-api-url>
@@ -88,6 +91,7 @@ Once everything is set up, start the Next.js development server:
 ```bash
 npm run dev
 ```
+
 Or with Yarn:
 
 ```bash

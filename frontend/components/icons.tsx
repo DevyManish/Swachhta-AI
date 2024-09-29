@@ -28,8 +28,12 @@ import {
   User,
   User2Icon,
   UserX2Icon,
-  X
-} from 'lucide-react';
+  X,
+} from "lucide-react";
+import { BiSolidReport } from "react-icons/bi";
+import { GiProcessor } from "react-icons/gi";
+import { IoSettingsOutline } from "react-icons/io5";
+
 
 export type Icon = LucideIcon;
 
@@ -48,9 +52,9 @@ export const Icons = {
   post: FileText,
   page: File,
   media: Image,
-  settings: Settings,
   billing: CreditCard,
   ellipsis: MoreVertical,
+  settings: IoSettingsOutline,
   add: Plus,
   warning: AlertTriangle,
   user: User,
@@ -59,7 +63,9 @@ export const Icons = {
   pizza: Pizza,
   sun: SunMedium,
   moon: Moon,
+  analysis: GiProcessor,
   laptop: Laptop,
+  report: BiSolidReport,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"
@@ -78,5 +84,5 @@ export const Icons = {
     </svg>
   ),
   twitter: Twitter,
-  check: Check
+  check: Check,
 };

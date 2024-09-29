@@ -1,12 +1,12 @@
-'use client';
-import { OurFileRouter } from '@/app/api/uploadthing/core';
-import { UploadDropzone } from '@uploadthing/react';
-import { Trash } from 'lucide-react';
-import Image from 'next/image';
-import { UploadFileResponse } from 'uploadthing/client';
-import { IMG_MAX_LIMIT } from './forms/product-form';
-import { Button } from './ui/button';
-import { useToast } from './ui/use-toast';
+"use client";
+import { OurFileRouter } from "@/app/api/uploadthing/core";
+import { UploadDropzone } from "@uploadthing/react";
+import { Trash } from "lucide-react";
+import Image from "next/image";
+import { UploadFileResponse } from "uploadthing/client";
+import { IMG_MAX_LIMIT } from "./forms/product-form";
+import { Button } from "./ui/button";
+import { useToast } from "./ui/use-toast";
 
 interface ImageUploadProps {
   onChange?: any;
@@ -17,7 +17,7 @@ interface ImageUploadProps {
 export default function FileUpload({
   onChange,
   onRemove,
-  value
+  value,
 }: ImageUploadProps) {
   const { toast } = useToast();
   const onDeleteFile = (key: string) => {
@@ -52,7 +52,7 @@ export default function FileUpload({
                   fill
                   className="object-cover"
                   alt="Image"
-                  src={item.url || ''}
+                  src={item.url || ""}
                 />
               </div>
             </div>
@@ -63,7 +63,7 @@ export default function FileUpload({
           <UploadDropzone<OurFileRouter>
             className="ut-label:text-sm ut-allowed-content:ut-uploading:text-red-300 py-2 dark:bg-zinc-800"
             endpoint="imageUploader"
-            config={{ mode: 'auto' }}
+            config={{ mode: "auto" }}
             content={{
               allowedContent({ isUploading }) {
                 if (isUploading)
@@ -74,7 +74,7 @@ export default function FileUpload({
                       </p>
                     </>
                   );
-              }
+              },
             }}
             onClientUploadComplete={(res) => {
               const data: UploadFileResponse[] | undefined = res;
@@ -84,9 +84,9 @@ export default function FileUpload({
             }}
             onUploadError={(error: Error) => {
               toast({
-                title: 'Error',
-                variant: 'destructive',
-                description: error.message
+                title: "Error",
+                variant: "destructive",
+                description: error.message,
               });
             }}
             onUploadBegin={() => {}}

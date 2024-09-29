@@ -1,7 +1,7 @@
-import { Breadcrumbs } from '@/components/breadcrumbs';
-import PageContainer from '@/components/layout/page-container';
-import { UserClient } from '@/components/tables/user-tables/client';
-import { analysisBatches } from '@/constants/data';
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import PageContainer from "@/components/layout/page-container";
+import { UserClient } from "@/components/tables/user-tables/client";
+import { analysisBatches } from "@/constants/data";
 
 import {
   Card,
@@ -9,27 +9,27 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle
-} from '@/components/ui/card';
+  CardTitle,
+} from "@/components/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu';
-import { Input } from '@/components/ui/input';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Button } from '@/components/ui/button';
-import InputDiv from '@/components/InputDiv';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { AlertTriangle } from 'lucide-react';
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button";
+import InputDiv from "@/components/InputDiv";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { AlertTriangle } from "lucide-react";
 
 const breadcrumbItems = [
-  { title: 'Dashboard', link: '/dashboard' },
-  { title: 'Settings', link: '/dashboard/settings' }
+  { title: "Dashboard", link: "/dashboard" },
+  { title: "Settings", link: "/dashboard/settings" },
 ];
 export default function page() {
   return (
@@ -64,10 +64,10 @@ export default function page() {
                         <InputDiv label="Pin" value="743158" />
                       </div>
                       <div className="flex flex-col justify-between md:flex-row md:space-x-10">
-                        <InputDiv label="Latitude" value={'40.7128'} />
-                        <InputDiv label="Longitude" value={'-74.0060'} />
+                        <InputDiv label="Latitude" value={"40.7128"} />
+                        <InputDiv label="Longitude" value={"-74.0060"} />
                       </div>
-                      <InputDiv label="Location" value={'40.7128, -74.0060'} />
+                      <InputDiv label="Location" value={"40.7128, -74.0060"} />
                     </div>
                   </div>
                 </div>
@@ -95,7 +95,7 @@ export default function page() {
             </div>
           </CardContent>
           <CardFooter className="justify-end">
-            <Button variant={'destructive'}>Change Password</Button>
+            <Button variant={"destructive"}>Change Password</Button>
           </CardFooter>
         </Card>
       </div>
