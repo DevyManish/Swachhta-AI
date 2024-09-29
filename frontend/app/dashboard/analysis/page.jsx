@@ -116,6 +116,8 @@ const Page = () => {
     }
   };
 
+  const renderAnalysisResult = () => {};
+
   return (
     <PageContainer scrollable={true}>
       <div className="space-y-4">
@@ -182,13 +184,13 @@ const Page = () => {
                         </FormControl>
                         <SelectContent>
                           <SelectItem value="700001">
-                          700001-Kolkata GPO
+                            700001-Kolkata GPO
                           </SelectItem>
                           <SelectItem value="400001">
-                          400001-Mumbai GPO
+                            400001-Mumbai GPO
                           </SelectItem>
                           <SelectItem value="110001">
-                          110001-New Delhi GPO
+                            110001-New Delhi GPO
                           </SelectItem>
                         </SelectContent>
                       </Select>
@@ -242,6 +244,7 @@ const Page = () => {
           </CardContent>
         </Card>
         <Separator />
+        {renderAnalysisResult()}
       </div>
     </PageContainer>
   );
