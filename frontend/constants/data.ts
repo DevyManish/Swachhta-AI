@@ -160,20 +160,20 @@ export const navItems: NavItem[] = [
   {
     title: "Reports",
     href: "/dashboard/reports",
-    icon: "user",
-    label: "user",
+    icon: "report",
+    label: "reports",
   },
   {
     title: "Analysis",
     href: "/dashboard/analysis",
-    icon: "employee",
-    label: "employee",
+    icon: "analysis",
+    label: "analysis",
   },
   {
     title: "Settings",
     href: "/dashboard/settings",
-    icon: "profile",
-    label: "profile",
+    icon: "settings",
+    label: "settings",
   },
 ];
 

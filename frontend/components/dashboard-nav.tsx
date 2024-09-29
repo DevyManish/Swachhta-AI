@@ -39,7 +39,7 @@ export function DashboardNav({
     <nav className="grid items-start gap-2">
       <TooltipProvider>
         {items.map((item, index) => {
-          const Icon = Icons[item.icon || "arrowRight"];
+          const Icon = Icons[item.icon as keyof typeof Icons || "arrowRight"];
           return (
             item.href && (
               <Tooltip key={index}>
