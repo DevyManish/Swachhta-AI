@@ -22,6 +22,12 @@ export default async function RootLayout({
   const session = await auth();
   return (
     <html lang="en">
+        <link
+          rel="icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+          sizes="16x16"
+        />
       <body
         className={`${inter.className} overflow-hidden `}
         suppressHydrationWarning={true}
